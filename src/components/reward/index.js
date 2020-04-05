@@ -1,33 +1,19 @@
 import React, { Component } from 'react';
-import './InputPass.css';
 
-class InputPass extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-    };
-  }
-
-  submitPass = () => {
-    this.props.comparePassword(this.state.value);
-    this.setState({ value: '' });
-  };
-
+class Reward extends Component {
   render() {
     return (
-      <div className='row col-12'>
-        <input
-          className='col-9'
-          placeholder='パスワード'
-          value={this.state.value}
-          maxLength={this.props.maxLength}
-          onChange={(event) => this.setState({ value: event.target.value })}></input>
-        <div className='col-1'></div>
-        <button onClick={() => this.submitPass()}>送信</button>
+      <div>
+        <h1>勝利</h1>
+        <div className='card-body'>
+          <p>
+            これらは非常に単純な課題です。
+            インターネットには他にも多くのトリッキーなトリックがありますので、注意してください。常に学ぶ気分に身を置いてください。そうしないと、いつかに銀行口座でお金を失うことになりますよ！！！。
+          </p>
+        </div>
       </div>
     );
   }
 }
 
-export default InputPass;
+export default Reward;

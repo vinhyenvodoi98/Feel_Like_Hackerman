@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
-import './InputPass.css';
 
-class InputPass extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-    };
-  }
-
-  submitPass = () => {
-    this.props.comparePassword(this.state.value);
-    this.setState({ value: '' });
-  };
-
+class Intro extends Component {
   render() {
     return (
-      <div className='row col-12'>
-        <input
-          className='col-9'
-          placeholder='パスワード'
-          value={this.state.value}
-          maxLength={this.props.maxLength}
-          onChange={(event) => this.setState({ value: event.target.value })}></input>
-        <div className='col-1'></div>
-        <button onClick={() => this.submitPass()}>送信</button>
+      <div>
+        <h1>前書き</h1>
+        <div className='card-body'>
+          <p>
+            画面に表示されるのは単なるhtmlとCSSであり、実際は偽物である可能性があります。
+            レベルを渡すためにhtmlとcssの知識を使用してください。頑張って！！！
+          </p>
+        </div>
+        <div className='card-body'>
+          <button onClick={() => this.props.startGame()}>スタート</button>
+        </div>
       </div>
     );
   }
 }
 
-export default InputPass;
+export default Intro;
