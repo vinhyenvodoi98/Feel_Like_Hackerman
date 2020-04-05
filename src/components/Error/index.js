@@ -10,6 +10,6 @@ class Error extends Component {
       </div>
     );
   }
-}
+  }
 
 export default Error;
