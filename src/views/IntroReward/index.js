@@ -4,7 +4,6 @@ import Reward from '../../components/Reward';
 
 class IntroReward extends Component {
   startGame = () => {
-    console.log('aaa');
     this.props.levelUp();
   };
 

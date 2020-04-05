@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import InputPass from '../../components/InputPass';
 import Error from '../../components/Error';
 
-import './Level1.css';
-
-class Level1 extends Component {
+class Level2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      password:
-        'adxi5d8hoelkjfsdfs324fg5gd3fg4gfd354g54b53sd4dg534er65g341fd35gdf3g2fdg5sqrwefrg98df6516e5r4f2d186a5rwe4reg6df5gfd327fuef58f',
+      password: 'HackedByDoHoang',
       isWrong: false,
     };
   }
@@ -25,7 +22,7 @@ class Level1 extends Component {
   render() {
     return (
       <div>
-        <div className='card'>レベル1</div>
+        <div className='card'>レベル2</div>
 
         <div className='card card-body'>
           <p>このレベルに合格するために、パスワードを入力してください</p>
@@ -38,19 +35,16 @@ class Level1 extends Component {
             <></>
           )}
 
-          <InputPass comparePassword={this.comparePassword} maxLength={32676} />
+          <InputPass comparePassword={this.comparePassword} maxLength={6} />
         </div>
 
         <div className='card card-body'>
           <div className='element-margin'>ヒント</div>
-          パスワード :
-          <code className='noselect'>
-            adxi5d8hoelkjfsdfs324fg5gd3fg4gfd354g54b53sd4dg534er65g341fd35gdf3g2fdg5sqrwefrg98df6516e5r4f2d186a5rwe4reg6df5gfd327fuef58f
-          </code>
+          パスワード :<code>HackedByDoHoang</code>
         </div>
       </div>
     );
   }
 }
 
-export default Level1;
+export default Level2;
